@@ -1,0 +1,32 @@
+body {
+    background-color: #fafafa;
+}
+
+.profile-pic {
+    display: block;
+    width: 75%;
+    height: auto;
+    margin-top: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+}
+
+.title {
+    margin-top: 40%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.subtitle {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+
+.icon {
+    width: 36px;
+    height: auto;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: 10px;
+    
+}
