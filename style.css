@@ -28,5 +28,16 @@ body {
     display: inline-block;
     margin-left: auto;
     margin-right: 10px;
-    
+}
+
+.container-top-padding {
+    margin-top: 100px;
+}
+
+.bio {
+    font-size: 15pt;
+}
+
+.center {
+    text-align: center;
 }
