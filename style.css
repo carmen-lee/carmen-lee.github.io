@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-
+    /* cursor: url(http://media.tumblr.com/ba8a578fcc51cd37abc9769ec19139f6/tumblr_inline_mki84fv6p41qz4rgp.png), url(http://media.tumblr.com/ba8a578fcc51cd37abc9769ec19139f6/tumblr_inline_mki84fv6p41qz4rgp.png), auto; */
 }
 
 .profile-pic {
@@ -52,7 +52,7 @@ body {
 }
 
 section {
-    margin-top: 5%;
+    margin-top: 10%;
     height: 100%;
     /* border: 1px solid black; */
     display: flex;
@@ -195,3 +195,13 @@ footer {
     opacity: 1;
   }
   /* End Clipboard */
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+  header {
+    background-color: #fafafa;
+  }
