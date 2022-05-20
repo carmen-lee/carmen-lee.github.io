@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- css file -->
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script>
+    <title>Projects</title>
+    <link rel="icon" href="/img/profilepic400x400.png">
+    
+</head>
+<body>
+    
+    <header class="sticky">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/index.html">Carmen Lee</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="/pages/about.html">About Me <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="/pages/projects.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/img/Lee_Carmen_Resume.pdf" target="_blank">Resume</a>
+                </li>
+              </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container container-top-5 title center"><h1><b>Diabetes Indicator Data Analysis</b></h1></div>
+    <div class="center">in collaboration with Mason Maviglia, Cicelia Siu, and Kevin-Ty Sweitzer</div>
+    <br> 
+    <img class="project-pic" src="/img/diabetesanalysis_img/cover.png" alt="diabetes">
+
+    <div class="container-fluid container-top-5">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8 project-body">
+
+                <h3>Motivation</h3>
+                <p>
+                    We wanted to challenge our machine learning abilities with a challenge that could have a huge impact on the world. Diabetes is a disease known for being undiagnosed for years when people have it. Since Diabetes affects 400 million people in the world, the goal of this project was to use machine learning to determine the most effective way of detecting whether or not an individual has diabetes or not.
+                </p>
+                <p>
+                    According to the CDC, Diabetes is a chronic (long-lasting) health condition that affects how your body turns food into energy. The human body naturally breaks down the food you eat into a sugar called glucose, and releases the glucose into your bloodstream. Then the pancreas releases insulin which allows your cells to receive the glucose in your bloodstream. However, people with diabetes either cannot produce insulin or the insulin being created does not work. This leaves too high of blood sugar levels in their bloodstream which can later cause heart disease, vision loss, and kidney disease.
+                </p>
+                <p>
+                    A motiviation for one of the members to specifically try a diabetes dataset is because their family member has diabetes. Anything they can do to help fight this struggle became their motiviation for this project.
+                </p>
+
+                <h3>Dataset</h3>
+                <p>
+                    The dataset used for this project was found on Kaggle.com. The survey was performed via telephone and was conducted by the CDC in 2015 that asked participants numerous health related questions. The original survey resulted in 330 features in total with 253,680 responses. The modified dataset found on Kaggle is a reduced version with only 21 features and contains only two classes for the target variable: 0 for no diabetes, and 1 for prediabetes or diabetes. It is important to note that the dataset is not balanced.
+                </p>
+                <p>
+                    The features that are included in the modified dataset are as follows: high blood pressure, high cholesterol, cholesterol check[ed], BMI, smoker, stroke, heart disease or attack, physical activity, fruits, vegetables, consumes heavy alcohol, any healthcare, afford doctor’s visit, general health, physical health, mental health, difficulty walking, sex, age, education, and income. The 21 features were chosen because of their potential relevance to detecting diabetes in an individual, and range from health conditions to lifestyle choices and factors.
+                </p>
+
+                <h4>Observations</h4>
+                <p>
+                    In our initial observation, we found that high blood pressure, high cholesterol, BMI, heart disease [or] attack, general health, and age all have significant correlation with the target variable. In addition, there is a slightly noticeable negative correlation with physical activity, education, and income with the outcome variable, meaning that diabetes is less prominent in individuals where these features are higher.
+                </p>
+                <img class="project-pic" src="/img/diabetesanalysis_img/heatmap.png" alt="Initial observations from the dataset visualized as a heatmap">
+
+                <h3>Machine Learning Algorithms</h3>
+                <p>
+                    When it comes to creating a model for a binary classification problem, such as this one, there are many suitable and popular algorithms. We chose to use k-Nearest Neighbors (KNN), Logistic Regression, and Neural Network to create a diabetes classifier, all which are very different, because we wanted to see how they would compare to one another in performance and accuracy.
+                </p>
+
+                <h3>Experiment</h3>
+                <h4>K-Nearest Neighbors (KNN)</h4>
+                <p>
+                    KNN is a simple, but very powerful supervised classification algorithm that classifies based on a similarity measure. KNN utilizes “lazy” learning because the model does not actually learn anything. Instead, when a new data is introduced, we find its k-nearest neighbor from the training data. This makes it very important to have a balanced and consistent training data.
+                </p>
+                <p>
+                    To make our diabetes predictions with the KNN model, a new data is compared with the entire training data and takes the output of its nearest neighbor (in this case, the mode). The nearest neighbor is measured by Euclidean distance. The formula for Euclidean distance is defined as:
+                    <img class="project-pic-equation" src="/img/diabetesanalysis_img/k_euclidean.png" alt="distance formula">
+                    , where p is the number of features and 𝑎𝑘 and 𝑏𝑘 are, respectively, the kth feature of a and b.
+                </p>
+                <p>
+                    Choosing the most optimal k is important to achieve maximum accuracy. We found that when k is less than or equal to 10, it leads to unstable decision boundaries, and for k greater than 10, the decision boundaries were smoother. For our KNN algorithm, we tested every k from 1 to 20. The optimal parameter for k would be where the error rate is at its lowest. Shown in graph below, the most optimal parameter was between 16 to 20. Due to our problem being a binary classification problem, 17, an odd k value, was chosen.
+                </p>
+                <img class="project-pic" src="/img/diabetesanalysis_img/k_codesnippet.png" alt="choosing k">
+                <img class="project-pic" src="/img/diabetesanalysis_img/k_error.png" alt="mean error">
+
+                <h4>Logistic Regression</h4>
+                <p>
+                    Logistic Regression is another supervised machine learning algorithm we used to determine the probability of an individual having diabetes. We wanted to determine the correlation of each feature with the target variable and see how they could affect the model. In the initial interpretation of the correlation coefficient of each feature, we can see that CholCheck, HighBP, GenHlth, and HighChol have significant influence on the model, whereas features like MentHlth and Smoker have little to no significance on the model.
+                </p>
+                <img class="project-pic" src="/img/diabetesanalysis_img/bar_chart.png" alt="significance bar chart">
+                <p>
+                    The model uses a logistic function to model the conditional probability of the label Y (prediabetic or diabetic) variables X (the 21 features). The continuous result is then mapped to a closed set [0, 1] using a sigmoid function, which is used to further interpret probability. In order to classify the continuous value, we rounded the probability to 0 or 1 to make a prediction.
+                    <img class="project-pic-equation" src="/img/diabetesanalysis_img/probability_eq.png" alt="conditional probability equation">
+                </p>
+
+                <h4>Artificial Neural Network</h4>
+                <p>
+                    In our artificial neural network (ANN), we use deep learning to perform binary classification on our dataset. This algorithm is completely different from our Logistic Model because it uses a backward propagation of errors with respect to the neural network's weights.
+                </p>
+                <p>
+                    In our initial experimentation, we use a simple ANN architecture: one input layer of 20 nodes, two hidden layers of 8 nodes each that use the Rectified Linear Unit (ReLu) activation function, and one output layer of 1 node that uses Sigmoid activation function. The ReLu activation function outputs the input directly if it is positive and zero otherwise to effectively help the model learn faster, while the Sigmoid function reduces the output to a value from 0.0 to 1.0 representing a probability.
+                </p>
+                <img class="project-pic" src="/img/diabetesanalysis_img/neuralnetwork.png" alt="NN architecture">
+                <p>
+                    To optimize our ANN, we used a grid test algorithm of various hyperparameters to find the optimal parameters for the neural network. We experimented with different optimizers, loss functions, learning rates, batch sizes, number of nodes, and epochs which resulted in the most optimal hyperparameters: Adam optimizer with the default learning rate, Binary Cross Entropy loss function, the default batch size, 8 nodes for each hidden layer, and a total of 100 epochs.
+                </p>
+                <p>
+                    We plotted the accuracy and loss to epochs to see how the model was improving each iteration. The elbow-shaped graph for the training data in the model loss plot shows that maximum accuracy was achieved, which corresponds with the model accuracy plot.
+                </p>
+                <div class="center">
+                    <img class="project-pic-inline" src="/img/diabetesanalysis_img/nn_loss.png" alt="NN loss">
+                    <img class="project-pic-inline" src="/img/diabetesanalysis_img/nn_accuracy.png" alt="NN accuracy">
+                </div>
+
+                <h3>Results</h3>
+                <h4>ROC Curve</h4>
+                <p>
+                    The ROC curve represents the discrimination between the classes that the models made. Having an ROC curve that is significantly different from a straight line shows that the classifier model is not making random guesses. Looking at the ROC curve from all of our models we can clearly see that our models were not making random guesses, and were using the training data to make inferences about the testing data. The area under the curve (AUC) shows how well the classifier is able to distinguish between the different classes. Looking at each models AUC, we can see that the Neural Network and Logistic Regression models were able to distinguish between the positive and negative classes much more than the KNN algorithm.
+                </p>
+                <p>
+                    Based on a rough classifying system, AUC can be interpreted as follows: 90 -100 = excellent; 80 - 90 = good; 70 - 80 = fair; 60 - 70 = poor; 50 - 60 = fail
+                </p>
+                <img class="project-pic" src="/img/diabetesanalysis_img/roc.png" alt="ROC curve comparison">
+
+                <h3>Conclusion</h3>
+                <p>
+                    Through the experiment we have found that Logistic Regression was the best technique to use for binary classification. It was more effective than KNN should in the ROC/AUC and the F1 score. Since Neural Network has very similar scores in the Confusion Matrix, Classification Report, and AUC, we chose to compare the time it took to run each technique. We found that it was more efficient to use Logistic Regression in comparison to Neural Network. In the end, we found that Logistic Regression is the best technique between these three when it comes to binary classification.
+                </p>
+
+                <h3>Obstacles</h3>
+                <p>
+                    One issue we faced was from the beginning of our experiment, when we didn’t look at what our dataset consisted of. We first looked at the features and the number of samples, but we didn’t consider the imbalance in the dataset. Near the end when the team was looking at the uneven F1 score from the classification report, we felt that there was something wrong. We searched up why the uneven F1 score would happen and found that an imbalanced dataset would do that. Looking at the percentage from each class, 14% of the samples has diabetes and the other 86% did not have diabetes.
+                </p>
+                <img class="project-pic" src="/img/diabetesanalysis_img/data_distribution.png" alt="unbalanced datasert">
+                <p>
+                    To fix the imbalance dataset, we added class weights to Logistic Regression. Logistic Regression was chosen over KNN due to its higher precision and was chosen over Neural Network due to the time that it took to find the optimal parameters. The confusion matrix and F1 score seemed to match the dataset more and shown below. Although the class weights didn’t give the optimal F1 score, it was much more evenly distributed and the accuracy seemed to match our model much better. Had we done this again, we could have added custom class weights to further optimize the model.
+                </p>
+
+                <h3>References</h3>
+                <p>
+                    Teboul, A., Centers for Disease Control and Prevention (2011). Diabetes Health Indicators Dataset. Retrieved March 24, 2022 from https://www.kaggle.com/datasets/alexteboul/diabetes-health-indicators-dataset
+                </p>
+
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+    </div>
+
+
+    <div class="row button">
+        <button type="button" class="btn btn-light" onclick="window.location='/pages/projects.html';">← Projects</button>
+    </div>
+
+
+    <!-- <footer>
+        <p><a href="/index.html" style="color:white">HOME</a></p>
+    </footer> -->
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

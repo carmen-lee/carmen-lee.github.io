@@ -11,14 +11,12 @@ body {
     display: block;
     width: 75%;
     height: auto;
-    margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
 }
 
 .title {
-    margin-top: 10%;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -35,8 +33,12 @@ body {
     margin-right: 10px;
 }
 
-.container-top-padding {
+.container-top-10 {
     margin-top: 10%;
+}
+
+.container-top-5 {
+    margin-top: 5%;
 }
 
 .center {
@@ -52,7 +54,6 @@ body {
 }
 
 section {
-    margin-top: 10%;
     height: 100%;
     /* border: 1px solid black; */
     display: flex;
@@ -65,13 +66,12 @@ h2 {
     font-family: 'Courier New', Courier, monospace;
 }
 
-.down-arrow {
-    height: 75px;
-    width: auto;
-    padding-right: 100px;
-    display: block;
-    align-items: right;
+h3 {
+    margin-top: 5%;
+}
 
+h4 {
+    margin-top: 2%;
 }
 
 .pic {
@@ -141,10 +141,6 @@ footer {
     /* margin-top: 20px; */
 }
 
-/* .container {
-    margin-top: 2%;
-} */
-
 #projects {
     justify-content: center;
     align-items: center;
@@ -162,7 +158,7 @@ footer {
     display: inline-block;
   }
   
-  .tooltip .tooltiptext {
+.tooltip .tooltiptext {
     visibility: hidden;
     width: 140px;
     background-color: #555;
@@ -177,9 +173,9 @@ footer {
     margin-left: -75px;
     opacity: 0;
     transition: opacity 0.3s;
-  }
-  
-  .tooltip .tooltiptext::after {
+}
+
+.tooltip .tooltiptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -188,20 +184,51 @@ footer {
     border-width: 5px;
     border-style: solid;
     border-color: #555 transparent transparent transparent;
-  }
-  
-  .tooltip:hover .tooltiptext {
+}
+
+.tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
-  }
+}
   /* End Clipboard */
 
   .sticky {
-    position: fixed;
+    /* position: fixed;
     top: 0;
-    width: 100%;
+    width: 100%; */
   }
 
-  header {
-    background-color: #fafafa;
-  }
+.button {
+    margin-top: 5%;
+    justify-content: center;
+}
+
+.project-body {
+    align-items: center;
+}
+
+.project-pic{
+    display: block;
+    width: 500px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
+
+.project-pic-equation {
+    display: block;
+    width: auto;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.project-pic-inline {
+    display: inline-block;
+    width: 400px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+}
