@@ -1,19 +1,24 @@
 body {
     background-color: #fafafa;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+
 }
 
 .profile-pic {
     display: block;
     width: 75%;
     height: auto;
-    margin-top: 30%;
+    margin-top: 10%;
     margin-left: auto;
     margin-right: auto;
     border-radius: 50%;
 }
 
 .title {
-    margin-top: 40%;
+    margin-top: 10%;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -31,13 +36,162 @@ body {
 }
 
 .container-top-padding {
-    margin-top: 100px;
-}
-
-.bio {
-    font-size: 15pt;
+    margin-top: 10%;
 }
 
 .center {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+
+.bio-text {
+    font-size: 15pt;
+}
+
+section {
+    margin-top: 5%;
+    height: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15%;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.down-arrow {
+    height: 75px;
+    width: auto;
+    padding-right: 100px;
+    display: block;
+    align-items: right;
+
+}
+
+.pic {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo{
+    display: block;
+    width: auto;
+    height: 75px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo2{
+    display: block;
+    width: 400px;
+    height: auto;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#experience {
+    justify-content: center;
+    align-items: center;
     text-align: center;
 }
+
+.line {
+    height: auto;
+    width: 100%;
+}
+
+#skills {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#body {
+    justify-content: center;
+}
+
+.icon2 {
+    width: auto;
+    height: 100px;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+footer {
+    /* justify-content: center;
+    align-items: center;
+    margin-bottom: 150px; */
+    background-color: rgb(200, 200, 200);
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    /* margin-top: 20px; */
+}
+
+/* .container {
+    margin-top: 2%;
+} */
+
+#projects {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-img-custom {
+    height: 100px;
+    width: auto;
+}
+
+/* Clipboard */
+.tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+  /* End Clipboard */
