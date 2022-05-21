@@ -103,6 +103,7 @@ h4 {
     display: block;
     width: auto;
     height: 75px;
+    max-width: 90vw;
     /* max-height: 20vw; */
     margin-bottom: 15px;
     margin-top: 15px;
@@ -124,7 +125,7 @@ h4 {
 #experience {
     justify-content: center;
     align-items: center;
-    text-align: center;
+    text-align: left;
 }
 
 .line {
