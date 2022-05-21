@@ -1,5 +1,18 @@
+/* 
+    Purple Color Scheme
+    --------------------
+    light purple #8064A2
+    dark purple #715494
+    light light purple #e3ccff 
+*/
+
+
 html {
     scroll-behavior: smooth;
+}
+
+::selection {
+    background: #e3ccff; /* WebKit/Blink Browsers */
 }
 
 body {
@@ -8,11 +21,11 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    /* cursor: url(http://media.tumblr.com/ba8a578fcc51cd37abc9769ec19139f6/tumblr_inline_mki84fv6p41qz4rgp.png), url(http://media.tumblr.com/ba8a578fcc51cd37abc9769ec19139f6/tumblr_inline_mki84fv6p41qz4rgp.png), auto; */
 }
 
 .profile-pic {
     display: block;
+    max-width: 75vw;
     width: 75%;
     height: auto;
     margin-left: auto;
@@ -66,7 +79,7 @@ section {
     margin-bottom: 15%;
 }
 
-h2 {
+.font {
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -90,6 +103,7 @@ h4 {
     display: block;
     width: auto;
     height: 75px;
+    /* max-height: 20vw; */
     margin-bottom: 15px;
     margin-top: 15px;
     margin-left: auto;
@@ -100,6 +114,7 @@ h4 {
     display: block;
     width: 400px;
     height: auto;
+    max-width: 90vw;
     margin-bottom: 15px;
     margin-top: 15px;
     margin-left: auto;
@@ -132,6 +147,7 @@ h4 {
     height: 100px;
     display: inline-block;
     margin-right: 20px;
+    margin-top: 20px;
 }
 
 footer {
@@ -196,11 +212,11 @@ footer {
 }
   /* End Clipboard */
 
-  .sticky {
-    /* position: fixed;
+  /* .sticky {
+    position: fixed;
     top: 0;
-    width: 100%; */
-  }
+    width: 100%;
+  } */
 
 .button {
     margin-top: 5%;
@@ -213,11 +229,14 @@ footer {
 
 .project-pic{
     display: block;
+    max-width: 80vw;
     width: 500px;
     height: auto;
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
+    object-fit: contain;
+    /* object-fit: scale-down; */
 }
 
 .project-pic-equation {
@@ -230,9 +249,26 @@ footer {
 
 .project-pic-inline {
     display: inline-block;
+    max-width: 80vw;
     width: 400px;
     height: auto;
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
 }
+
+/* Primary Button */
+.btn-primary {
+    background-color: #FFF;
+    color: #8064A2;
+    border-color: #715494;
+    /* border-radius: 25px; */
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active    {
+    background-color: #8064A2;
+    color: #FFF;
+    border-color: #715494;
+}
+/* End Primary Button */

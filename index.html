@@ -21,7 +21,7 @@
     
     <header class="sticky">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="/index.html">Carmen Lee</a>
+            <a class="navbar-brand" href="/index.html"><h2>Carmen Lee</h2></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -58,12 +58,12 @@
                   <a href="https://www.linkedin.com/in/carmen-l33/" target="_blank"><img src="/img/icon/linkedin.png" class="icon"></a>
                   <!-- <a href="https://www.instagram.com/_ghaman/" target="_blank"><img src="/img/icon/instagram.png" class="icon"></a> -->
                   <a href="https://github.com/carmen-lee" target="_blank"><img src="/img/icon/github.png" class="icon"></a>
-                  <button type="button" class="btn btn-light" onclick="window.location='pages/about.html';">About me →</button>
+                  <button type="button" class="btn btn-primary" onclick="window.location='pages/about.html';">About me →</button>
                   <br><br>
                   <!-- The text field -->
-                  <input type="text" value="carmen.lee.lv@gmail.com" id="myInput" size="22">
+                  <input type="text" value="carmen.lee.lv@gmail.com" id="myInput" size="22" readonly>
                   <!-- The button used to copy the text -->
-                  <button onclick="myFunction()">Copy</button>
+                  <button class="btn btn-light" id="copy-btn" onclick="myFunction()">Copy</button>
               </div>
               <div class="col-md-2"></div>
           </div>
@@ -95,8 +95,9 @@
         /* Copy the text inside the text field */
         navigator.clipboard.writeText(copyText.value);
 
-        /* Alert the copied text */
-        alert("Copied: " + copyText.value);
+        /* Change button text when copied text */
+        var elem = document.getElementById("copy-btn");
+        elem.innerHTML = 'Copied!';
       }
     </script>
   </body>
