@@ -9,17 +9,20 @@
 
 html {
     scroll-behavior: smooth;
+    cursor: url(https://cur.cursors-4u.net/cursors/cur-9/cur834.cur), auto !important;
 }
 
 ::selection {
     background: #e3ccff; /* WebKit/Blink Browsers */
+    color: black;
 }
 
 body {
-    background-color: #fafafa;
+    /* background-color: #fafafa; */
+    background-color: white;
     height: 100%;
     margin: 0;
-    padding: 0;
+    padding-top: 65px;
     height: 100%;
 }
 
@@ -77,6 +80,7 @@ section {
     justify-content: center;
     align-items: center;
     margin-bottom: 15%;
+    margin-top: 5%;
 }
 
 .font {
@@ -126,6 +130,7 @@ h4 {
     justify-content: center;
     align-items: center;
     text-align: left;
+    margin-top: 25px;
 }
 
 .line {
@@ -152,14 +157,15 @@ h4 {
 }
 
 footer {
-    /* justify-content: center;
-    align-items: center;
-    margin-bottom: 150px; */
-    background-color: rgb(200, 200, 200);
-    color: white;
-    text-align: center;
-    padding-top: 20px;
-    /* margin-top: 20px; */
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height: 25px;
+    background-color: #715494;
+    font-size: smaller;
+    font-family: 'Courier New', Courier, monospace;
+    color: #fafafa;
 }
 
 #projects {
@@ -178,7 +184,6 @@ footer {
     position: relative;
     display: inline-block;
   }
-  
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 140px;
@@ -195,7 +200,6 @@ footer {
     opacity: 0;
     transition: opacity 0.3s;
 }
-
 .tooltip .tooltiptext::after {
     content: "";
     position: absolute;
@@ -206,7 +210,6 @@ footer {
     border-style: solid;
     border-color: #555 transparent transparent transparent;
 }
-
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
@@ -258,6 +261,14 @@ footer {
     border-radius: 10px;
 }
 
+/* Custom Card Img Height */
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
+/* End Custom Card Img Height*/
+
 /* Primary Button */
 .btn-primary {
     background-color: #FFF;
@@ -273,3 +284,13 @@ footer {
     border-color: #715494;
 }
 /* End Primary Button */
+
+/* Custom Toggler Button */
+.custom-toggler .navbar-toggler-icon {
+    background-image: url(
+        "data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(113, 84, 148, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.custom-toggler.navbar-toggler {
+    border-color: #715494;
+}
+/* End Custom Toggler Button */
