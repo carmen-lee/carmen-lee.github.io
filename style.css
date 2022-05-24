@@ -79,7 +79,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 15%;
+    margin-bottom: 5%;
     margin-top: 5%;
 }
 
@@ -294,3 +294,8 @@ footer {
     border-color: #715494;
 }
 /* End Custom Toggler Button */
+
+/* potential change */
+/* .card-title {
+    color: #715494 ;
+} */
