@@ -79,7 +79,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5%;
+    margin-bottom: 7%;
     margin-top: 5%;
 }
 
@@ -225,7 +225,6 @@ footer {
 .button {
     margin-top: 5%;
     justify-content: center;
-    margin-bottom: 10%;
 }
 
 .project-body {
