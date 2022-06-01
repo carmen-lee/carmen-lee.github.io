@@ -108,7 +108,8 @@ h4 {
     width: auto;
     height: 75px;
     max-width: 90vw;
-    /* max-height: 20vw; */
+    /* max-width: 200px; */
+    max-height: 20vw;
     margin-bottom: 15px;
     margin-top: 15px;
     margin-left: auto;
@@ -119,7 +120,7 @@ h4 {
     display: block;
     width: 400px;
     height: auto;
-    max-width: 90vw;
+    max-width: 200px;
     margin-bottom: 15px;
     margin-top: 15px;
     margin-left: auto;
@@ -266,6 +267,7 @@ footer {
 .card-img-top {
     width: 100%;
     height: 15vw;
+    /* max-height: 50vh; */
     object-fit: cover;
 }
 /* End Custom Card Img Height*/
@@ -279,10 +281,17 @@ footer {
 }
 .btn-primary:hover,
 .btn-primary:focus,
-.btn-primary:active    {
+.btn-primary:active{
     background-color: #8064A2;
     color: #FFF;
     border-color: #715494;
+}
+
+.btn.btn-primary.disabled {
+    background-color: #FFF;
+    color: #8064A2;
+    border-color: #715494;
+    opacity: .3;
 }
 /* End Primary Button */
 
