@@ -66,30 +66,32 @@
 
                 <h3>Creating the Bot</h3>
                 <p>
-                    In order to create the bot, I created a Webdriver object with Selenium that would control the browser. From there, I had to familiarize myself with Selenium methods and HTML in order to get the data I want, in this case, is the highlighted word. I also needed to consider how to input the word into the input field and the timer.
+                    In order to create the bot, I created a WebDriver object with Selenium that would control the browser. From there, I had to familiarize myself with Selenium methods and HTML in order to get the data I want, in this case, is the highlighted word. I also needed to consider how to input the word into the input field and how to incorporate the timer.
                 </p>
-                <img class="project-pic" src="/img/typingtest_img/inspect.png" alt="">
+                <img class="project-pic" src="/img/typingtest_img/inspect.png" alt="inspecting elements">
                 <p>
-                    The Selenium library allows me to find different HTML elements by class and id, so I used that to get the highlighted word. I used the same method to identify the timer and input field. 
+                    The Selenium library allows me to find different HTML elements by class or identifier, so I used that to get the highlighted word. I used the same method to identify the timer and input field. Once I identified the different elements, I was able to manipulate them as I needed.
                 </p>
                 <p>
-                    Other methods that were significant and fundamental for the bot to work properly were <b>send_keys()</b> and <b>sleep()</b>.
+                    Other Selenium methods that were significant and fundamental for the bot to work properly were <b>send_keys()</b> and <b>sleep()</b>. I used send_keys() to simulate a pressed button, or in this case, the enter key. sleep() was essential for loading the webpage initially and also for timing.
                 </p>
 
                 <h3>Testing and Observations</h3>
-                <img class="project-pic" src="/img/typingtest_img/testing.gif" alt="">
+                <img class="project-pic" src="/img/typingtest_img/testing.gif" alt="running bot">
                 <p>
                     Upon testing, the bot was able to open up an incognito browser, load the webpage, complete the typing test within the time limit, and also close the window.
                 </p>
                 
                 <p>
-                    After running multiple tests, I observed that the results were inconsistent.
+                    After running multiple tests, I observed that the results were inconsistent. The final summaries would show accuracies other than 100% and the wpm would range from 200 to 300+ wpm. This could be caused by the connection, or a delay caused by insuffieciently locating the correct element in the HTML source.
                 </p>
-                <img class="project-pic-inline" id="results" src="/img/typingtest_img/results.png" alt="inconsistent results">
-                <img class="project-pic-inline" src="/img/typingtest_img/results2.png" alt="inconsistent results">
+                <div class="center">
+                    <img class="project-pic-inline" src="/img/typingtest_img/results.png" alt="inconsistent results" style="width: 200px;">
+                    <img class="project-pic-inline" src="/img/typingtest_img/results2.png" alt="inconsistent results" style="width: 200px;">
+                </div>
 
                 <p>
-                    I also ran into a Selenium WebDriver error for an invalid session id which was resolved after I reset the cache.
+                    I also ran into a Selenium error for an "invalid session id" which would crash the bot and close the browser without warning. This was resolved after I reset the cache of my browser.
                 </p>
 
                 <h3>Improvements</h3>
@@ -100,12 +102,17 @@
                     Since the time of creation, Selenium has updated its own features so other improvements I could make are updating the depracated services.
                 </p>
 
+                <h3>References</h3>
+                <p>
+                    https://selenium-python.readthedocs.io/api.html
+                </p>
+
             </div>
             <div class="col-md-2"></div>
         </div>
     </div>
 
-    <div class="containter-fluid center">
+    <div class="containter-fluid center container-top-5">
         <a href="https://github.com/carmen-lee/projects/tree/master/Web%20Crawler" target="_blank"><img class="icon" src="/img/icon/github.png"></a>
     </div>
 
