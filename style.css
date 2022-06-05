@@ -26,6 +26,20 @@ body {
     height: 100%;
 }
 
+a:link,
+a:visited,
+a:active {
+    color: #715494;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #8064A2;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
 .profile-pic {
     display: block;
     max-width: 75vw;
@@ -293,6 +307,12 @@ footer {
     border-color: #715494;
     opacity: .3;
 }
+.btn.btn-primary[disabled] {
+    background-color: #FFF;
+    color: #8064A2;
+    border-color: #715494;
+    opacity: .3;
+}
 /* End Primary Button */
 
 /* Custom Toggler Button */
@@ -309,3 +329,10 @@ footer {
 /* .card-title {
     color: #715494 ;
 } */
+
+.caption {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-style: italic;
+}
