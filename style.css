@@ -269,7 +269,7 @@ footer {
 .project-pic-inline {
     display: inline-block;
     max-width: 80vw;
-    width: 400px;
+    /* width: 400px; */
     height: auto;
     margin-left: auto;
     margin-right: auto;
