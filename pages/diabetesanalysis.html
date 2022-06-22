@@ -68,7 +68,7 @@
 
                 <h3>Dataset</h3>
                 <p>
-                    The dataset used for this project was found on Kaggle.com. The survey was performed via telephone and was conducted by the CDC in 2015 that asked participants numerous health related questions. The original survey resulted in 330 features in total with 253,680 responses. The modified dataset found on Kaggle is a reduced version with only 21 features and contains only two classes for the target variable: 0 for no diabetes, and 1 for prediabetes or diabetes. It is important to note that the dataset is not balanced.
+                    The dataset used for this project was found on Kaggle.com. The survey was performed via telephone and was conducted by the CDC in 2015 that asked participants numerous health related questions. The original survey resulted in 330 features in total with 253,680 responses. The modified dataset found on Kaggle is a reduced version with only 21 features and contains only two classes for the target variable: 0 for no diabetes, and 1 for pre-diabetes or diabetes. It is important to note that the dataset is not balanced.
                 </p>
                 <p>
                     The features that are included in the modified dataset are as follows: high blood pressure, high cholesterol, cholesterol check[ed], BMI, smoker, stroke, heart disease or attack, physical activity, fruits, vegetables, consumes heavy alcohol, any healthcare, afford doctor’s visit, general health, physical health, mental health, difficulty walking, sex, age, education, and income. The 21 features were chosen because of their potential relevance to detecting diabetes in an individual, and range from health conditions to lifestyle choices and factors.
@@ -107,7 +107,7 @@
                 </p>
                 <img class="project-pic" src="/img/diabetesanalysis_img/bar_chart.png" alt="significance bar chart">
                 <p>
-                    The model uses a logistic function to model the conditional probability of the label Y (prediabetic or diabetic) variables X (the 21 features). The continuous result is then mapped to a closed set [0, 1] using a sigmoid function, which is used to further interpret probability. In order to classify the continuous value, we rounded the probability to 0 or 1 to make a prediction.
+                    The model uses a logistic function to model the conditional probability of the label Y (pre-diabetic or diabetic) variables X (the 21 features). The continuous result is then mapped to a closed set [0, 1] using a sigmoid function, which is used to further interpret probability. In order to classify the continuous value, we rounded the probability to 0 or 1 to make a prediction.
                     $$P=(Y|X)$$
                 </p>
 
@@ -120,7 +120,7 @@
                 </p>
                 <img class="project-pic" src="/img/diabetesanalysis_img/neuralnetwork.png" alt="NN architecture">
                 <p>
-                    To optimize our ANN, we used a grid test algorithm of various hyperparameters to find the optimal parameters for the neural network. We experimented with different optimizers, loss functions, learning rates, batch sizes, number of nodes, and epochs which resulted in the most optimal hyperparameters: Adam optimizer with the default learning rate, Binary Cross Entropy loss function, the default batch size, 8 nodes for each hidden layer, and a total of 100 epochs.
+                    To optimize our ANN, we used a grid test algorithm of various hyperparameter to find the optimal parameters for the neural network. We experimented with different optimizers, loss functions, learning rates, batch sizes, number of nodes, and epochs which resulted in the most optimal hyperparameter: Adam optimizer with the default learning rate, Binary Cross Entropy loss function, the default batch size, 8 nodes for each hidden layer, and a total of 100 epochs.
                 </p>
                 <p>
                     We plotted the accuracy and loss to epochs to see how the model was improving each iteration. The elbow-shaped graph for the training data in the model loss plot shows that maximum accuracy was achieved, which corresponds with the model accuracy plot.
@@ -149,7 +149,7 @@
                 <p>
                     One issue we faced was from the beginning of our experiment, when we didn’t look at what our dataset consisted of. We first looked at the features and the number of samples, but we didn’t consider the imbalance in the dataset. Near the end when the team was looking at the uneven F1 score from the classification report, we felt that there was something wrong. We searched up why the uneven F1 score would happen and found that an imbalanced dataset would do that. Looking at the percentage from each class, 14% of the samples has diabetes and the other 86% did not have diabetes.
                 </p>
-                <img class="project-pic" src="/img/diabetesanalysis_img/data_distribution.png" alt="unbalanced datasert">
+                <img class="project-pic" src="/img/diabetesanalysis_img/data_distribution.png" alt="unbalanced dataset">
                 <p>
                     To fix the imbalance dataset, we added class weights to Logistic Regression. Logistic Regression was chosen over KNN due to its higher precision and was chosen over Neural Network due to the time that it took to find the optimal parameters. The confusion matrix and F1 score seemed to match the dataset more and shown below. Although the class weights didn’t give the optimal F1 score, it was much more evenly distributed and the accuracy seemed to match our model much better. Had we done this again, we could have added custom class weights to further optimize the model.
                 </p>

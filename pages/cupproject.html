@@ -57,36 +57,43 @@
 
                 <h3>Motivation</h3>
                 <p>
-                  According to a 2016 survey, 8% of college students have reported to have had their drinks spiked and almost 80% of them were female. Las Vegas, my home and community, is a city known for its nightlife and entertainment. There are fun activitites, restaurants and bars available and open 24/7, but they can become a breeding ground for illicit activities.
+                  According to a 2016 survey, 8% of college students have reported to have had their drinks spiked and almost 80% of them were female. Las Vegas, my home and community, is a city known for its nightlife and entertainment. There are fun activities, restaurants and bars available and open 24/7, but they can become a breeding ground for illicit activities.
                 </p>
                 <p>
-                  As a solution to this problem, we've come up with a device that will act as a lid for the drink and alert the owner if it has been tampered with. We hope that bars and restuarants can provide thier customers with this device in order to avoid incidents of spiked drinks from happening.
+                  As a solution to this problem, we've come up with a device that will act as a smart lid for the drink and alert the owner if it has been tampered with. We hope that bars and restaurants can provide their customers with this device in order to reduce incidents of spiked drinks.
+                </p>
+
+                <p>
+                  I managed the software development of this project, and was tasked to program the Arduino and and build the IOS app.
                 </p>
 
                 <h3>Programming the Arduino</h3>
                 <img class="project-pic" src="/img/cupprotector_img/arduino.png" style="width: 200px;" alt="Arduino Nano 33 IOT">
                 <p class="caption">Arduino Nano 33 IOT</p>
                 <p>
-                  For this project, we wanted to simply collect data, display it, and then do logic according to the data. We chose to use an Arduino Nano 33 IOT module due to the embedded sensors as well as its Bluetooth® Low Energy capabilities to send data to a cellphone. 
+                  For this project, we wanted to create a minimal viable product that could collect, display, and act on data. We chose to use an Arduino Nano 33 IOT module due to the onboard sensors and Bluetooth® Low Energy capabilities it has to send data to a cellphone. 
                 </p>
+                <p>
+                  From a high level, the Cup Protector samples its onboard accelerometer and determines if the acceleration magnitude indicates a spike attempt. 
+                </p>
+
                 <h4>Collecting and Manipulating Data</h4>
                 <p>
-                  The way the device can detect if it has been tampered with is movement. The embedded accelerometer was useful for collecting that data. We manipulated the acceleration data to get magnitude which is what we use to monitor movement and create thresholds.
+                  The Cup Protector detects if a lid has been taken off of a cup by analyzing acceleration values in the x, y, and z dimensions. More specifically, the magnitude of all three acceleration vectors was determined and used as the primary detection value.
                 </p>
                 <img class="project-pic" src="/img/cupprotector_img/arduino_serialplot.png" alt="Serial Plot">
                 <p class="caption">Plotting Magnitude over Time</p>
-                
                 <p>
-                  In the initial testing, we used the LED on the module as an indicator to detect movement. After it was working as expected, we enabled Bluetooth on the Arduino and turn the LED off via our <a href = "#app">IOS mobile app</a> that we developed. Ensuring that everything was still working, we continued to connect more <a href = "#hardware">external modules</a> to create an actual alarm-like system with buzzers and lights.
+                  I used the embedded LED on the module as a spike attempt indicator. Afterwards, Bluetooth was enabled on the Arduino to control the onboard LED via the <a href = "#app">IOS mobile app</a> I developed. Then after connecting more <a href = "#hardware">external modules</a>, additional logic was added to create an actual alarm-like system with buzzers and lights.
                 </p>
                 <img class="project-pic" src="/img/cupprotector_img/arduino_light_demo.gif" alt="Arduino Light Turning On">
                 <p class="caption">Demo - Movement Detected</p>
                 <img class="project-pic" src="/img/cupprotector_img/arduino_code_snippet.png" alt="Arduino Code Snippet" style="width: 600px;">
-                <p class="caption">Code Snippet</p>
+                <p class="caption">Arduino basic logic with all components</p>
 
-                <h4>Improvements</h4>
+                <h4>Data Collection Improvements</h4>
                 <p>
-                  One thing we noticed as we were trying to detect movement was the amount noise we were collecting. It made it hard to detect whether or not the movement that was detected was a "real" spike attempt, or just a table bump. In other words, it was hard to isolate False-Positives. As this problem is common and already solved, we hope to implement a solution in the future.
+                  One thing we noticed while detecting movement was the amount noise we were collecting. It made it hard to detect whether or not the movement that was detected was a real spike attempt, or just a table bump. In other words, it was hard to isolate false-positives. We plan to characterize this noise and implement a Fourier transform to isolate it. The Arduino Nano IOT has sufficient compute capability for the Fourier transform to run in real-time.
                 </p>
                 <img class="project-pic" src="/img/cupprotector_img/arduino_serialplot_demo.gif" alt="Serial Plot Noise">
                 <p class="caption">Magnitude Noise</p>
@@ -104,7 +111,7 @@
 
                 <h3 id="app">Developing the App</h3>
                 <p>
-                  The purpose of the app is to act as a simple remote to disarm the device to ensure that all bluetooth connections were working properly. Initially, I looked into using <a href="https://appinventor.mit.edu/">MIT App Inventor</a> because of how quick and easy it is to design and build an app with declarative programming. Unfortunately, it did not support Bluetooth Low Energy and I had to find another solution. I ended up developing the app with Swift. Using Swift, I was able to design first and then add all the logic afterwards. 
+                  I built an app to act as a simple remote for the Cup Protector as well as a centralized hub for receiving alerts and controlling the device. Initially, I looked into using <a href="https://appinventor.mit.edu/">MIT App Inventor</a> because of how quick and easy it is to design and build an app with declarative programming. Unfortunately, it did not support Bluetooth Low Energy and I had to find another solution. I ended up developing the app with Swift. Using Swift, I was still able to design first and then add all the logic afterwards. 
                 </p>
                 <div class="center">
                   <img class="project-pic-inline" src="/img/cupprotector_img/app1.PNG" alt="initial app preview" style="height: 400px;">
@@ -120,15 +127,15 @@
                   <ol>
                     <li>Scan and connect to the BLE module through its universally unique identifier (UUID)</li>
                     <li>Enable and disable functions according to connection status</li>
-                    <li>Read and display the battery level of the module (currently simulates the battery level)</li>
+                    <li>Read and display the battery level of the module (currently simulates a battery level)</li>
                     <li>Turn off the external modules, ie. LED lights and buzzers</li>
                     <li>Disconnect from the BLE module</li>
                   </ol>
                 </p>
 
-                <h4>Improvements</h4>
+                <h4>App Improvements</h4>
                 <p>
-                  Our app is only available for IOS which is not practical or ideal. In the future, we would like to deploy a web application that would be available to any device. Ideally, it would not have to be installed on the device prior to use, but instead accessed through a QR code which has the same capabilities to control the device.
+                  Our app is only available for IOS which is not practical or ideal. In the future, I would like to deploy a web application that would be available to any device. Ideally, it would not have to be installed on the device prior to use, but instead accessed through a QR code and has the same capabilities to control the device.
                 </p>
                 <img class="project-pic" src="/img/cupprotector_img/wireframe.png" alt="prototype" style="">
                 <p class="caption">Informal Mobile App Wireframe for Future Development</p>
