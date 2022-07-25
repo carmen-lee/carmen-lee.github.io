@@ -56,7 +56,7 @@
 
                 <h3>Motivation</h3>
                 <p>
-                    As a keyboard enthusiast, my friends and I always try to find the most comfortable, most ergonomic, and aesthetically-pleasing mechanical keyboard that not only sounds pleasing to the ear, but also enables us to type as accurately and efficient as possible. To test our keyboards, we always compete through various typing test sites, such as 10fastfingers and Monkeytype. Recently, my friend had surpassed 100wpm and as competitive as I am, I wanted to beat him. I thought it'd be a great idea to create a bot that would help me complete typing tests.
+                    As a keyboard enthusiast, my friends and I always try to find the most comfortable, ergonomic, and aesthetically-pleasing mechanical keyboard that not only sounds pleasing to the ear, but also enables us to type as accurately and efficiently as possible. To test our keyboards, we always compete through various typing test sites, such as 10fastfingers and Monkeytype. Recently, my friend had surpassed 100wpm and as competitive as I am, I wanted to beat him. I thought it'd be a great idea to create a bot that would help me complete typing tests.
                 </p>
 
                 <h3>Selenium</h3>
@@ -66,14 +66,14 @@
 
                 <h3>Creating the Bot</h3>
                 <p>
-                    In order to create the bot, I created a WebDriver object with Selenium that would control the browser. From there, I had to familiarize myself with Selenium methods and HTML in order to get the data I want, in this case, is the highlighted word. I also needed to consider how to input the word into the input field and how to incorporate the timer.
+                    In order to create the bot, I created a WebDriver object with Selenium that would control the DOM objects in the browser. From there, I had to familiarize myself with various Selenium methods and HTML in order to get the data I want. In this case, it is the highlighted word. I also needed to consider how to input the target word into the input field and how to incorporate the timer as a constraint.
                 </p>
                 <img class="project-pic" src="/img/typingtest_img/inspect.png" alt="inspecting elements">
                 <p>
-                    The Selenium library allows me to find different HTML elements by class or identifier, so I used that to get the highlighted word. I used the same method to identify the timer and input field. Once I identified the different elements, I was able to manipulate them as I needed.
+                    The Selenium library allows me to find different DOM objects by class or identifier, so I used the various methods to get the highlighted word, and identify the timer and input field. Once I identified the different elements, I was able to manipulate them as I needed.
                 </p>
                 <p>
-                    Other Selenium methods that were significant and fundamental for the bot to work properly were <b>send_keys()</b> and <b>sleep()</b>. I used send_keys() to simulate a pressed button, or in this case, the enter key. sleep() was essential for loading the webpage initially and also for timing.
+                    Other Selenium methods that were significant and fundamental for the bot to work properly were <code>send_keys()</code> and <code>sleep()</code>. I used <code>send_keys()</code> to simulate a pressed button, or in this case, the enter key. <code>sleep()</code> was essential for loading the webpage initially and also for timing.
                 </p>
 
                 <h3>Testing and Observations</h3>
@@ -83,7 +83,7 @@
                 </p>
                 
                 <p>
-                    After running multiple tests, I observed that the results were inconsistent. The final summaries would show accuracies other than 100% and the wpm would range from 200 to 300+ wpm. This could be caused by the connection, or a delay caused by insufficiently locating the correct element in the HTML source.
+                    After running multiple tests, I observed that the results were inconsistent. The final summaries would show various accuracies below 100% and the wpm would range from 200 to 300+ wpm. These discrepancies could be explained by a poor connection, or a delay caused by insufficient locating of the correct DOM element in the source code.
                 </p>
                 <div class="center">
                     <img class="project-pic-inline" src="/img/typingtest_img/results.png" alt="inconsistent results" style="width: 200px;">
@@ -96,7 +96,7 @@
 
                 <h3>Improvements</h3>
                 <p>
-                    One improvement I could make is for the driver of the web crawler. Selenium requires the driver to be compatible with the browser version, so if the driver were to be outdated, then there could be repercussions on the performance of the bot. I could implement an automatic driver download when I run the bot so that I wouldn't need to do it manually.
+                    One improvement I could make is for the driver of the web crawler. Selenium requires the driver to be compatible with the browser version, so if the driver were to be outdated, then there could be repercussions on the performance of the bot. I could implement an automatic driver download when I run the bot so that I wouldn't need to update it manually.
                 </p>
                 <p>
                     Since the time of creation, Selenium has updated its own features so other improvements I could make are updating the deprecated services.
