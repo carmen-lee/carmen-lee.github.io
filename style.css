@@ -1,6 +1,7 @@
 /* 
     Purple Color Scheme
     --------------------
+    neon purple #8E47E5
     light purple #8064A2
     dark purple #715494
     light light purple #e3ccff 
@@ -41,7 +42,7 @@ a:hover{
 }
 
 code {
-    color: #8064A2;
+    color: #8E47E5;
 }
 
 .profile-pic {
