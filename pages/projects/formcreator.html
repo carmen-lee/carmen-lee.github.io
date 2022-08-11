@@ -1,112 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-    <!-- css file -->
-    <link rel="stylesheet" type="text/css" href="/style.css">
-    
-    <!-- font awesome -->
-    <!-- <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script> -->
-    
-    <!-- favicon -->
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-    
-    
-    <title>Form Creator</title>
+	<!-- css file -->
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	
+	<!-- font awesome -->
+	<!-- <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script> -->
+	
+	<!-- favicon -->
+	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+	
+	
+	<title>Form Creator</title>
 
 </head>
 <body>
-    
-    <header class="sticky">
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top"  style="background-color: #fafafa;">
-            <a class="navbar-brand" href="/index.html"><h3>Carmen Lee</h3></a>
-            <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="/pages/about.html">About Me</a>
-                </li>
-                <li class="nav-item active">
-                  <a class="nav-link" href="/pages/projects.html">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/pages/Lee_Carmen_Resume.pdf" target="_blank">Resume</a>
-                </li>
-              </ul>
-            </div>
-        </nav>
-    </header>
+	
+	<header class="sticky">
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top"  style="background-color: #fafafa;">
+			<a class="navbar-brand" href="/index.html"><h3>Carmen Lee</h3></a>
+			<button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+			  <ul class="navbar-nav">
+				<li class="nav-item">
+				  <a class="nav-link" href="/pages/about.html">About Me</a>
+				</li>
+				<li class="nav-item active">
+				  <a class="nav-link" href="/pages/projects.html">Projects</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/pages/Lee_Carmen_Resume.pdf" target="_blank">Resume</a>
+				</li>
+			  </ul>
+			</div>
+		</nav>
+	</header>
 
-    <div class="container-fluid container-top-5 title center"><h1><b>Form Creator</b></h1></div>
-    <br> 
-    <img class="project-pic" src="/img/typingtest_img/typingtest.png" alt="typing test">
-    <div class="container-fluid center container-top-5">React ✿ JavaScript ✿ TypeScript</div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8 project-body">
+	<div class="container-fluid container-top-5 title center"><h1><b>Form Creator</b></h1></div>
+	<br> 
+	<img class="project-pic" src="/images/projects/preview_images/formcreator.png" alt="typing test">
+	<div class="container-fluid center container-top-5">React ✿ JavaScript ✿ TypeScript</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8 project-body">
 
-                <h3>Motivation</h3>
-                <p>
-                    As a keyboard enthusiast, my friends and I always try to find the most comfortable, ergonomic, and aesthetically-pleasing mechanical keyboard that not only sounds pleasing to the ear, but also enables us to type as accurately and efficiently as possible. To test our keyboards, we always compete through various typing test sites, such as 10fastfingers and Monkeytype. Recently, my friend had surpassed 100wpm and as competitive as I am, I wanted to beat him. I thought it'd be a great idea to create a bot that would help me complete typing tests.
-                </p>
+				<h3>Motivation</h3>
+				<p>
+					Over the summer, I was able to intern for a fullstack development team and was able to learn and gain real industry experience for different backend and frontend technologies. I learned React, JavaScript, and TypeScript over the course of 2 weeks and was able to implement everything I learned into the different UI projects I was assigned. Taking the skills I learned, I created the Form Creator that generates a dynamic form from an easy-to-use template.
+				</p>
 
-                <h3>Selenium</h3>
-                <p>
-                    There are many libraries that are used by web scraping developers, namely Beautiful Soup, Scrapy, and Selenium. I decided to use Selenium because of its powerful browser capabilities and its popularity in creating bots.
-                </p>
+				<h3>The Template</h3>
+				<p>
+					The parent components, Form.tsx, generates a dynamic form from a template JSON file. The general layout of the JSON template is:
+					<br><br>
+					<img class="project-pic" src="/images/projects/formcreator_images/form_template.png" alt="Form Template">
+				</p>
 
-                <h3>Creating the Bot</h3>
-                <p>
-                    In order to create the bot, I created a WebDriver object with Selenium that would control the DOM objects in the browser. From there, I had to familiarize myself with various Selenium methods and HTML in order to get the data I want. In this case, it is the highlighted word. I also needed to consider how to input the target word into the input field and how to incorporate the timer as a constraint.
-                </p>
-                <img class="project-pic" src="/img/typingtest_img/inspect.png" alt="inspecting elements">
+				<h3>Working with React</h3>
+				<p>
+					Having never worked with UIs before, with the exception of HTML and CSS, JavaScript and React were a monster to learn. Implementing JavaScript with the addition of React, proved to be a challenge because of its dynamic nature that I wasn't used to and the concept of "saving states". After this project, I was able to implement JSX, apply React hooks, and handle all types of events.
+				</p>
+					<h4>React Components</h4>
+					<p>
+						To make this creator as efficient as possible, I tried breaking the project up as much as possible. The main component, a helper component, and a component for each field type.
+					</p>
+					<p>
+						The main component is in charge of reading the template file and maps each form field it finds to a helper component. The helper component can be thought of like a control center where it creates the appropriate field type. The different type of fields that can be generated are: drop down menus, radio buttons, date selector, input and text area fields. Each type of field is its own component and receives information from the template and are passed down, from parent to child, through <code>React props</code> that are used to customize the form field.
+					</p>
+					<h4>React Hooks</h4>
+					<p>
+						React hooks were a vital part of making the form work such as <code>useState()</code> and <code>useEffect()</code>. I was even able to semi-create my own hook <code>useStyle()</code> and use it as if it were a React hook.
+					</p>
+					<img class="project-pic" src="/images/projects/formcreator_images/react_hooks.png" alt="React Hooks">
+					<h4>Events</h4>
+					<p>
+						Using event listeners and handlers were also a new concept I had to quickly adapt myself to. Using event listeners, like <code>onChange()</code> and event handlers, like <code>handleSubmit()</code>, I was able to make my form truly "reactive". React allows real-time updates to the form values unlike before, where the inputted values would be updated once the `Submit` button was clicked.
+					</p>
 
-                <h3>Improvements</h3>
-                <p>
-                    One improvement I could make is for the driver of the web crawler. Selenium requires the driver to be compatible with the browser version, so if the driver were to be outdated, then there could be repercussions on the performance of the bot. I could implement an automatic driver download when I run the bot so that I wouldn't need to update it manually.
-                </p>
-                <p>
-                    Since the time of creation, Selenium has updated its own features so other improvements I could make are updating the deprecated services.
-                </p>
+					<img class="project-pic" src="/images/projects/formcreator_images/onChange.gif" alt="Handling the Submit Button">
+					<p class="caption">onChange()</p> <br>
+					<img class="project-pic" src="/images/projects/formcreator_images/submit_console.png" alt="Handling the Submit Button">
+					<p class="caption">handleSubmit()</p>
 
-                <h3>References</h3>
-                <p>
-                    https://selenium-python.readthedocs.io/api.html
-                </p>
+				<h3>TypeScript</h3>
+				<p>
+					In addition, at the end I converted all JavaScript files to TypeScript. Converting and adopting TypeScript in my project is beneficial because it make components easy to read and understand what type of props are passed. This reduces the amount of potential bugs and errors that could occur. As I was used to C++, which is a strongly typed language, using JavaScript was initially super convenient and new, but it allowed for more typing errors. TypeScript is strongly typed, but allows for the flexibility JavaScript has, which was what I appreciated.
+				</p>
 
-            </div>
-            <div class="col-md-2"></div>
-        </div>
-    </div>
+				<h3>Improvements</h3>
+					<h4>Styling</h4>
+					<p>
+						Styling can be done in multiple ways: statically and dynamically. I was able to use static styling by referencing my custom stylesheet. On the other hand, dynamic styling has precedence over static styling and is the preferred way to style components. After getting around to it, I imported the <code>Material UI</code> library to customize my components, along with <code>makeStyles()</code>. I was able to create a hook, <code>useStyle()</code>, and pass that function to some of the child components to style them as well. As an improvement, I would style all my components using this method instead of what it currently is. 
+					</p>
 
-    <div class="containter-fluid center container-top-5">
-        <a href="https://github.com/carmen-lee/Form-Creator" target="_blank"><img class="icon" src="/img/icon/github.png"></a>
-    </div>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
 
-    <section>
-    <div class="container-fluid center button">
-        <button type="button" class="btn btn-primary" onclick="window.location='/pages/projects.html';">← Projects</button>
-    </div>
-    </section>
-    
-    <footer>
-        <p class="center">&copy; 2022 Copyright - Carmen Lee</p>
-    </footer>
-    
+	<div class="containter-fluid center container-top-5">
+		<a href="https://github.com/carmen-lee/Form-Creator" target="_blank"><img class="icon" src="/images/skills_icons/github.png"></a>
+	</div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<section>
+	<div class="container-fluid center button">
+		<button type="button" class="btn btn-primary" onclick="window.location='/pages/projects.html';">← Projects</button>
+	</div>
+	</section>
+	
+	<footer>
+		<p class="center">&copy; 2022 Copyright - Carmen Lee</p>
+	</footer>
+	
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </body>
 </html>
