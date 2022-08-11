@@ -38,7 +38,7 @@
                   <a class="nav-link" href="/pages/projects.html">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/img/Lee_Carmen_Resume.pdf" target="_blank">Resume</a>
+                    <a class="nav-link" href="/pages/Lee_Carmen_Resume.pdf" target="_blank">Resume</a>
                 </li>
               </ul>
             </div>
@@ -68,7 +68,7 @@
                 </p>
 
                 <h3>Programming the Arduino</h3>
-                <img class="project-pic" src="/img/cupprotector_img/arduino.png" style="width: 200px;" alt="Arduino Nano 33 IOT">
+                <img class="project-pic" src="/images/projects/cupprotector_images/arduino.png" style="width: 200px;" alt="Arduino Nano 33 IOT">
                 <p class="caption">Arduino Nano 33 IOT</p>
                 <p>
                   For this project, we wanted to create a minimal viable product that could collect, display, and act on data. We chose to use an Arduino Nano 33 IOT module due to the onboard sensors and Bluetooth® Low Energy capabilities it has to send data to a cellphone. 
@@ -81,32 +81,32 @@
                 <p>
                   The Cup Protector detects if a lid has been taken off of a cup by analyzing acceleration values in the x, y, and z dimensions. More specifically, the magnitude of all three acceleration vectors was determined and used as the primary detection value.
                 </p>
-                <img class="project-pic" src="/img/cupprotector_img/arduino_serialplot.png" alt="Serial Plot">
+                <img class="project-pic" src="/images/projects/cupprotector_images/arduino_serialplot.png" alt="Serial Plot">
                 <p class="caption">Plotting Magnitude over Time</p>
                 <p>
                   I used the embedded LED on the module as a spike attempt indicator. Afterwards, Bluetooth was enabled on the Arduino to control the onboard LED via the <a href = "#app">IOS mobile app</a> I developed. Then after connecting more <a href = "#hardware">external modules</a>, additional logic was added to create an actual alarm-like system with buzzers and lights.
                 </p>
-                <img class="project-pic" src="/img/cupprotector_img/arduino_light_demo.gif" alt="Arduino Light Turning On">
+                <img class="project-pic" src="/images/projects/cupprotector_images/arduino_light_demo.gif" alt="Arduino Light Turning On">
                 <p class="caption">Demo - Movement Detected</p>
-                <img class="project-pic" src="/img/cupprotector_img/arduino_code_snippet.png" alt="Arduino Code Snippet" style="width: 600px;">
+                <img class="project-pic" src="/images/projects/cupprotector_images/arduino_code_snippet.png" alt="Arduino Code Snippet" style="width: 600px;">
                 <p class="caption">Arduino basic logic with all components</p>
 
                 <h4>Data Collection Improvements</h4>
                 <p>
                   One thing we noticed while detecting movement was the amount noise we were collecting. It made it hard to detect whether or not the movement that was detected was a real spike attempt, or just a table bump. In other words, it was hard to isolate false-positives. We plan to characterize this noise and implement a Fourier transform to isolate it. The Arduino Nano IOT has sufficient compute capability for the Fourier transform to run in real-time.
                 </p>
-                <img class="project-pic" src="/img/cupprotector_img/arduino_serialplot_demo.gif" alt="Serial Plot Noise">
+                <img class="project-pic" src="/images/projects/cupprotector_images/arduino_serialplot_demo.gif" alt="Serial Plot Noise">
                 <p class="caption">Magnitude Noise</p>
 
 
                 <h3 id="hardware">Hardware</h3>
-                <img class="project-pic" src="/img/cupprotector_img/casing.png" alt="3D printed casing">
+                <img class="project-pic" src="/images/projects/cupprotector_images/casing.png" alt="3D printed casing">
                 <p class="caption">3D Printed Plastic Casing</p>
-                <img class="project-pic" src="/img/cupprotector_img/pcb.png" alt="pcb" style="width: 400px;">
+                <img class="project-pic" src="/images/projects/cupprotector_images/pcb.png" alt="pcb" style="width: 400px;">
                 <p class="caption">Custom Printed Circuit Board</p>
-                <img class="project-pic" src="/img/cupprotector_img/soldering.jpg" alt="soldering on smd components">
+                <img class="project-pic" src="/images/projects/cupprotector_images/soldering.jpg" alt="soldering on smd components">
                 <p class="caption">Soldering on surface mount device components</p>
-                <img class="project-pic" src="/img/cupprotector_img/prototype.png" alt="prototype" style="height: 400px;">
+                <img class="project-pic" src="/images/projects/cupprotector_images/prototype.png" alt="prototype" style="height: 400px;">
                 <p class="caption">Prototype</p>
 
                 <h3 id="app">Developing the App</h3>
@@ -114,8 +114,8 @@
                   I built an app to act as a simple remote for the Cup Protector as well as a centralized hub for receiving alerts and controlling the device. Initially, I looked into using <a href="https://appinventor.mit.edu/">MIT App Inventor</a> because of how quick and easy it is to design and build an app with declarative programming. Unfortunately, it did not support Bluetooth Low Energy and I had to find another solution. I ended up developing the app with Swift. Using Swift, I was still able to design first and then add all the logic afterwards. 
                 </p>
                 <div class="center">
-                  <img class="project-pic-inline" src="/img/cupprotector_img/app1.PNG" alt="initial app preview" style="height: 400px;">
-                  <img class="project-pic-inline" src="/img/cupprotector_img/app2.PNG" alt="initial app preview" style="height: 400px;">
+                  <img class="project-pic-inline" src="/images/projects/cupprotector_images/app1.PNG" alt="initial app preview" style="height: 400px;">
+                  <img class="project-pic-inline" src="/images/projects/cupprotector_images/app2.PNG" alt="initial app preview" style="height: 400px;">
                 </div>
                 <p class="caption">Initial App Design</p>
 
@@ -137,7 +137,7 @@
                 <p>
                   Our app is only available for IOS which is not practical or ideal. In the future, I would like to deploy a web application that would be available to any device. Ideally, it would not have to be installed on the device prior to use, but instead accessed through a QR code and has the same capabilities to control the device.
                 </p>
-                <img class="project-pic" src="/img/cupprotector_img/wireframe.png" alt="prototype" style="">
+                <img class="project-pic" src="/images/projects/cupprotector_images/wireframe.png" alt="prototype" style="">
                 <p class="caption">Informal Mobile App Wireframe for Future Development</p>
                 
 
@@ -149,7 +149,7 @@
     </div>
 
     <div class="containter-fluid center container-top-5">
-        <a href="" target="_blank"><img class="icon" src="/img/icon/github.png"></a>
+        <a href="" target="_blank"><img class="icon" src="/images/skills_icons/github.png"></a>
     </div>
 
     <section>

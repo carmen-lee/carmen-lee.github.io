@@ -41,7 +41,7 @@
                   <a class="nav-link" href="/pages/projects.html">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/img/Lee_Carmen_Resume.pdf" target="_blank">Resume</a>
+                    <a class="nav-link" href="/pages/Lee_Carmen_Resume.pdf" target="_blank">Resume</a>
                 </li>
               </ul>
             </div>
@@ -51,7 +51,7 @@
     <div class="container-fluid container-top-5 title center"><h1><b>Diabetes Indicator Data Analysis</b></h1></div>
     <div class="container-fluid center">in collaboration with Mason M., Cicelia S., and Kevin T. S.</div>
     <br> 
-    <img class="project-pic" src="/img/diabetesanalysis_img/cover.png" alt="diabetes">
+    <img class="project-pic" src="/images/projects/diabetesanalysis_images/cover.png" alt="diabetes">
     <div class="container-fluid center container-top-5">Machine Learning ✿ Python ✿ TensorFlow ✿ Jupyter</div>
     <div class="container-fluid">
         <div class="row">
@@ -78,7 +78,7 @@
                 <p>
                     In our initial observation, we found that high blood pressure, high cholesterol, BMI, heart disease [or] attack, general health, and age all have significant correlation with the target variable. In addition, there is a slightly noticeable negative correlation with physical activity, education, and income with the outcome variable, meaning that diabetes is less prominent in individuals where these features are higher.
                 </p>
-                <img class="project-pic" src="/img/diabetesanalysis_img/heatmap.png" alt="Initial observations from the dataset visualized as a heatmap">
+                <img class="project-pic" src="/images/projects/diabetesanalysis_images/heatmap.png" alt="Initial observations from the dataset visualized as a heatmap">
 
                 <h3>Machine Learning Algorithms</h3>
                 <p>
@@ -98,14 +98,14 @@
                 <p>
                     Choosing the most optimal k is important to achieve maximum accuracy. We found that when k is less than or equal to 10, it leads to unstable decision boundaries, and for k greater than 10, the decision boundaries were smoother. For our KNN algorithm, we tested every k from 1 to 20. The optimal parameter for k would be where the error rate is at its lowest. Shown in graph below, the most optimal parameter was between 16 to 20. Due to our problem being a binary classification problem, 17, an odd k value, was chosen.
                 </p>
-                <img class="project-pic" src="/img/diabetesanalysis_img/k_codesnippet.png" alt="choosing k">
-                <img class="project-pic" src="/img/diabetesanalysis_img/k_error.png" alt="mean error">
+                <img class="project-pic" src="/images/projects/diabetesanalysis_images/k_codesnippet.png" alt="choosing k">
+                <img class="project-pic" src="/images/projects/diabetesanalysis_images/k_error.png" alt="mean error">
 
                 <h4>Logistic Regression</h4>
                 <p>
                     Logistic Regression is another supervised machine learning algorithm we used to determine the probability of an individual having diabetes. We wanted to determine the correlation of each feature with the target variable and see how they could affect the model. In the initial interpretation of the correlation coefficient of each feature, we can see that CholCheck, HighBP, GenHlth, and HighChol have significant influence on the model, whereas features like MentHlth and Smoker have little to no significance on the model.
                 </p>
-                <img class="project-pic" src="/img/diabetesanalysis_img/bar_chart.png" alt="significance bar chart">
+                <img class="project-pic" src="/images/projects/diabetesanalysis_images/bar_chart.png" alt="significance bar chart">
                 <p>
                     The model uses a logistic function to model the conditional probability of the label Y (pre-diabetic or diabetic) variables X (the 21 features). The continuous result is then mapped to a closed set [0, 1] using a sigmoid function, which is used to further interpret probability. In order to classify the continuous value, we rounded the probability to 0 or 1 to make a prediction.
                     $$P=(Y|X)$$
@@ -118,7 +118,7 @@
                 <p>
                     In our initial experimentation, we use a simple ANN architecture: one input layer of 20 nodes, two hidden layers of 8 nodes each that use the Rectified Linear Unit (ReLu) activation function, and one output layer of 1 node that uses Sigmoid activation function. The ReLu activation function outputs the input directly if it is positive and zero otherwise to effectively help the model learn faster, while the Sigmoid function reduces the output to a value from 0.0 to 1.0 representing a probability.
                 </p>
-                <img class="project-pic" src="/img/diabetesanalysis_img/neuralnetwork.png" alt="NN architecture">
+                <img class="project-pic" src="/images/projects/diabetesanalysis_images/neuralnetwork.png" alt="NN architecture">
                 <p>
                     To optimize our ANN, we used a grid test algorithm of various hyperparameter to find the optimal parameters for the neural network. We experimented with different optimizers, loss functions, learning rates, batch sizes, number of nodes, and epochs which resulted in the most optimal hyperparameter: Adam optimizer with the default learning rate, Binary Cross Entropy loss function, the default batch size, 8 nodes for each hidden layer, and a total of 100 epochs.
                 </p>
@@ -126,8 +126,8 @@
                     We plotted the accuracy and loss to epochs to see how the model was improving each iteration. The elbow-shaped graph for the training data in the model loss plot shows that maximum accuracy was achieved, which corresponds with the model accuracy plot.
                 </p>
                 <div class="center">
-                    <img class="project-pic-inline" src="/img/diabetesanalysis_img/nn_loss.png" alt="NN loss" style="width: 400px;">
-                    <img class="project-pic-inline" src="/img/diabetesanalysis_img/nn_accuracy.png" alt="NN accuracy" style="width: 400px;">
+                    <img class="project-pic-inline" src="/images/projects/diabetesanalysis_images/nn_loss.png" alt="NN loss" style="width: 400px;">
+                    <img class="project-pic-inline" src="/images/projects/diabetesanalysis_images/nn_accuracy.png" alt="NN accuracy" style="width: 400px;">
                 </div>
 
                 <h3>Results</h3>
@@ -138,7 +138,7 @@
                 <p>
                     Based on a rough classifying system, AUC can be interpreted as follows: 90 -100 = excellent; 80 - 90 = good; 70 - 80 = fair; 60 - 70 = poor; 50 - 60 = fail
                 </p>
-                <img class="project-pic" src="/img/diabetesanalysis_img/roc.png" alt="ROC curve comparison">
+                <img class="project-pic" src="/images/projects/diabetesanalysis_images/roc.png" alt="ROC curve comparison">
 
                 <h3>Conclusion</h3>
                 <p>
@@ -149,7 +149,7 @@
                 <p>
                     One issue we faced was from the beginning of our experiment, when we didn’t look at what our dataset consisted of. We first looked at the features and the number of samples, but we didn’t consider the imbalance in the dataset. Near the end when the team was looking at the uneven F1 score from the classification report, we felt that there was something wrong. We searched up why the uneven F1 score would happen and found that an imbalanced dataset would do that. Looking at the percentage from each class, 14% of the samples has diabetes and the other 86% did not have diabetes.
                 </p>
-                <img class="project-pic" src="/img/diabetesanalysis_img/data_distribution.png" alt="unbalanced dataset">
+                <img class="project-pic" src="/images/projects/diabetesanalysis_images/data_distribution.png" alt="unbalanced dataset">
                 <p>
                     To fix the imbalance dataset, we added class weights to Logistic Regression. Logistic Regression was chosen over KNN due to its higher precision and was chosen over Neural Network due to the time that it took to find the optimal parameters. The confusion matrix and F1 score seemed to match the dataset more and shown below. Although the class weights didn’t give the optimal F1 score, it was much more evenly distributed and the accuracy seemed to match our model much better. Had we done this again, we could have added custom class weights to further optimize the model.
                 </p>
@@ -165,7 +165,7 @@
     </div>
 
     <div class="containter-fluid center container-top-5">
-        <a href="https://github.com/carmen-lee/Diabetes-Indicator-Data-Analysis" target="_blank"><img class="icon" src="/img/icon/github.png"></a>
+        <a href="https://github.com/carmen-lee/Diabetes-Indicator-Data-Analysis" target="_blank"><img class="icon" src="/images/skills_icons/github.png"></a>
     </div>
 
     <section>
