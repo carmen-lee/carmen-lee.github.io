@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<!-- css file -->
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	
+	<!-- font awesome -->
+	<!-- <script src="https://kit.fontawesome.com/31149d48b0.js" crossorigin="anonymous"></script> -->
+	
+	<!-- favicon -->
+	<link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+	
+	
+	<title>Sprout!</title>
+
+</head>
+<body>
+	
+	<header class="sticky">
+		<nav class="navbar navbar-expand-lg navbar-light fixed-top"  style="background-color: #fafafa;">
+			<a class="navbar-brand" href="/index.html"><h3>Carmen Lee</h3></a>
+			<button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			  <span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+			  <ul class="navbar-nav">
+				<li class="nav-item">
+				  <a class="nav-link" href="/pages/about.html">About Me</a>
+				</li>
+				<li class="nav-item active">
+				  <a class="nav-link" href="/pages/projects.html">Projects</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/pages/Lee_Carmen_Resume.pdf" target="_blank">Resume</a>
+				</li>
+			  </ul>
+			</div>
+		</nav>
+	</header>
+
+	<div class="container-fluid container-top-5 title center"><h1><b>Sprout!</b></h1></div>
+	<div class="container-fluid center">in collaboration with Cicelia S. and Edward S.</div>
+	<br> 
+	<img class="project-pic" src="/images/projects/sprout/loginpage.jpg" alt="typing test">
+	<div class="container-fluid center container-top-5">php ✿ Bootstrap ✿ JavaScript ✿ MySQL</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class="col-md-8 project-body">
+
+				<h3>Description</h3>
+				<p>
+					Sprout! The pregnancy tracker is an application that keeps track of the following: 
+					<ul>
+						<li>Patients</li>
+						<li>Pregnancies</li>
+						<li>Doctors</li>
+						<li>Appointments</li>
+						<li>Medications</li>
+					</ul>
+				</p>
+				<p>
+					It also provides different interfaces and actions depending on the user's role.
+				</p>
+					<ul>Patient portal
+						<ul>
+						<li>View/Edit Personal Information</li>
+						<li>View Pregnancies</li>
+						<li>View/Request Appointments</li>
+						<li>View Medications</li>
+						</ul>
+					</ul>
+					<ul>Doctor portal
+						<ul>
+						<li>Patient Search</li>
+						<li>View/Edit Personal Information</li>
+						<li>View/Edit Pregnancies</li>
+						<li>View/Schedule Appointments</li>
+						<li>View/Prescribe Medications</li>
+						</ul>
+					</ul>
+					<ul>System Admin portal
+						<ul>
+						<li>Create accounts</li>
+						<li>Search/Edit/Delete any records</li>
+						<li>Change login information</li>
+						</ul>
+					</ul>
+
+				<h3>Tasks</h3>
+				<p>
+					<ul>General
+						<ul>
+						<li>Integrated bootstrap, fontawesome, and google fonts CDN</li>
+						<li>Created UI, generic outline and components for pages (section cards, tables, nav, theme, background)</li>
+						<li>Added navbar with redirection to pages</li>
+						<li>Auth Guard for all pages so unauthorized users must login</li>
+						<li>Added logout functionality</li>
+						<li>Added footer for pages</li>
+						<li>Added error/success messages</li>
+						<li>Generated random data for database to be displayed</li>
+						</ul>
+					</ul>
+					<ul>Login / Register Pages
+						<ul>
+						<li>Styled login and register pages</li>
+						</ul>
+					</ul>
+					<ul>Admin Portal
+						<ul>
+						<li>Cleaned up forms</li>
+						<li>Added buttons to open modals for database modifications for each type of user</li>
+						</ul>
+					</ul>
+					<ul>Doctor Portal
+						<ul>
+						<li>Created database table for appointments</li>
+						<li>Created doctor appointment form and connected to database</li>
+						<li>Created tables to show appointments at different status’</li>
+						<li>Added buttons to change the status of appointments</li>
+						</ul>
+					</ul>
+					<ul>Patient Portal
+						<ul>
+						<li>Added icons for table</li>
+						<li>Created patient appointment form and connected to database</li>
+						<li>Created tables to show appointments at different status’</li>
+						<li>Added buttons to change the status of appointments</li>
+						</ul>
+					</ul>
+				</p>
+				<br><br>
+				<p><i>This page is a work in progress</i></p>
+			</div>
+			<div class="col-md-2"></div>
+		</div>
+	</div>
+
+	<div class="containter-fluid center container-top-5">
+		<a href="https://github.com/carmen-lee/pregnancy-tracker" target="_blank"><img class="icon" src="/images/skills_icons/github.png"></a>
+	</div>
+
+	<section>
+	<div class="container-fluid center button">
+		<button type="button" class="btn btn-primary" onclick="window.location='/pages/projects.html';">← Projects</button>
+	</div>
+	</section>
+	
+	<footer>
+		<p class="center">&copy; 2022 Copyright - Carmen Lee</p>
+	</footer>
+	
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
